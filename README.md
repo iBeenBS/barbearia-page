@@ -7,3 +7,6 @@ marcarem um horário para serem atendidos.
 
 # Aprendizados
 Efeito Parallax.
+
+# Tecnologias
+HTML, CSS, JavaScript & SQL.
