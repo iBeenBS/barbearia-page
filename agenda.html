@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="style.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8"/>
+	
+	<title>Barbearia Willian's - Dashboard</title>
+</head>
+<html>
+	<body class="dashboard-body">
+	<section class="dashboard-app">
+		<div class="collum">
+			<div class="title-container">BARBEARIA<br><span class="willians-title">WILLIAN'S</title></div>
+			<div class="title-line"></div>
+			<button class="agenda-dashboard-btn" onclick="openAgenda()">AGENDA</button>
+			<button class="clientes-dashboard-btn" onclick="openClientes()">CLIENTES</button>
+			<button class="financeiro-dashboard-btn" onclick="openFinanceiro()">FINANCEIRO</button>
+			<button class="servicos-dashboard-btn" onclick="openServicos()">SERVIÇOS</button>
+			<button class="promocao-dashboard-btn" onclick="openPromocoes()">PROMOÇÕES</button>
+			<button class="notificacao-dashboard-btn" onclick="openNotificacoes()">NOTIFICAÇÕES</button>
+		</div>
+		<div class="category-line">
+			<div class="category">
+				<h1 id="title">AGENDA DA SEMANA</h1>
+			</div>
+		</div>
+		<div id="agenda"></div>
+	</section>
+		<script>
+			carregarAgenda();
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

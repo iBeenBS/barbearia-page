@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="style.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8"/>
+	
+	<title>Barbearia Willian's - Agendar</title>
+</head>
+<html>
+  <body class="reservar-body">
+    <section class="ag-container">
+      <div class="header-reservar">
+        <img class="reservar-retornar" src="https://i.imgur.com/b0iyO5E.png" onclick="home()">
+        <h1>RESERVE SEU HORÁRIO:</h1>
+      </div>
+      <div class="form-box" id="formulario">
+        
+  <label>Nome</label>
+  <input type="text" id="nome" required>
+  <label>Serviço</label>
+  <select id="servico" required>
+    <option disabled selected></option>
+    <option>Cabelo</option>
+    <option>Barba</option>
+    <option>Sombrancelha</option>
+    <option>Cabelo + Barba</option>
+    <option>Completo</option>
+  </select>
+  <label>Data</label>
+  <input type="date" id="data" required>
+  <label>Horário</label>
+  <input type="time" id="hora" required>
+  
+  <button id="btn">Agendar Horário</button>
+
+</div>
+<div class="modal" id="modal">
+
+  <div class="modal-box">
+
+    <h2>Agendamento realizado </h2>
+
+    <div class="resumo">
+
+      <p id="resumoServico"></p>
+
+      <p id="resumoData"></p>
+
+      <p id="resumoHora"></p>
+
+    </div>
+
+    <button id="fecharModal btn" onclick="fecharModalAgenda()">
+      Fechar
+    </button>
+
+  </div>
+  <!-- MODAL HORÁRIO CHEIO -->
+<div class="modal" id="modalCheio">
+
+  <div class="modal-box erro">
+
+    <h2>Horário indisponível 😭</h2>
+
+    <p>
+      Já existe um agendamento nesse horário.
+    </p>
+
+    <button class="btn-modal fechar">
+      Entendi
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- MODAL SERVIÇO EM ANDAMENTO -->
+<div class="modal" id="modalConflito">
+
+  <div class="modal-box aviso">
+
+    <h2>Barbeiro ocupado ✂️</h2>
+
+    <p id="textoConflito"></p>
+
+    <button class="btn-modal fechar">
+      Fechar
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- MODAL CAMPOS VAZIOS -->
+<div class="modal" id="modalCampos">
+
+  <div class="modal-box alerta">
+
+    <h2>Campos incompletos 😵</h2>
+
+    <p>
+      Preencha todas as informações para continuar.
+    </p>
+
+    <button class="btn-modal fechar">
+      Ok
+    </button>
+
+  </div>
+
+</div>
+
+</div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+		<script src="script.js"></script>
+  </body>
+</html>
